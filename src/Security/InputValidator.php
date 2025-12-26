@@ -90,6 +90,19 @@ class InputValidator
     }
     
     /**
+     * Get and escape POST value
+     * 
+     * @param string $key POST key
+     * @param string $default Default value if key not found
+     * @return string Escaped value
+     */
+    public static function getPostValue(string $key, string $default = ''): string
+    {
+        $value = $_POST[$key] ?? $default;
+        return self::escapeHtml($value);
+    }
+    
+    /**
      * Generate CSRF token
      * 
      * @return string CSRF token

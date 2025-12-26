@@ -54,7 +54,11 @@ class MailService
         // Replace placeholders
         $body = str_replace(
             ['{{username}}', '{{reset_link}}', '{{app_name}}'],
-            [htmlspecialchars($username, ENT_QUOTES, 'UTF-8'), $resetLink, \Config::get('app.name', 'PHP Login System')],
+            [
+                htmlspecialchars($username, ENT_QUOTES, 'UTF-8'), 
+                htmlspecialchars($resetLink, ENT_QUOTES, 'UTF-8'), 
+                htmlspecialchars(\Config::get('app.name', 'PHP Login System'), ENT_QUOTES, 'UTF-8')
+            ],
             $template
         );
         

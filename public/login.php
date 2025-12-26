@@ -80,7 +80,7 @@ require_once __DIR__ . '/../templates/header.php';
                 name="email" 
                 required 
                 autocomplete="email"
-                value="<?php echo isset($_POST['email']) ? InputValidator::escapeHtml($_POST['email']) : ''; ?>"
+                value="<?php echo InputValidator::getPostValue('email'); ?>"
             >
         </div>
         

@@ -13,7 +13,7 @@ $pageTitle = $pageTitle ?? 'PHP Login System';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title><?php echo htmlspecialchars($pageTitle, ENT_QUOTES, 'UTF-8'); ?></title>
-    <link rel="stylesheet" href="/public/assets/css/style.css">
+    <link rel="stylesheet" href="<?php echo htmlspecialchars(Config::get('app.url', ''), ENT_QUOTES, 'UTF-8'); ?>/public/assets/css/style.css">
 </head>
 <body>
     <header>
@@ -27,9 +27,9 @@ $pageTitle = $pageTitle ?? 'PHP Login System';
                 
                 if (SessionManager::isLoggedIn()): ?>
                     <span>Welcome, <?php echo htmlspecialchars(SessionManager::get('user_username'), ENT_QUOTES, 'UTF-8'); ?></span>
-                    <a href="/public/logout.php">Logout</a>
+                    <a href="<?php echo htmlspecialchars(Config::get('app.url', ''), ENT_QUOTES, 'UTF-8'); ?>/public/logout.php">Logout</a>
                 <?php else: ?>
-                    <a href="/public/login.php">Login</a>
+                    <a href="<?php echo htmlspecialchars(Config::get('app.url', ''), ENT_QUOTES, 'UTF-8'); ?>/public/login.php">Login</a>
                 <?php endif; ?>
             </nav>
         </div>

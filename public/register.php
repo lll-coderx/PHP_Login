@@ -89,7 +89,7 @@ require_once __DIR__ . '/../templates/header.php';
                     autocomplete="username"
                     pattern="[a-zA-Z0-9_]{3,50}"
                     title="3-50 characters, alphanumeric and underscores only"
-                    value="<?php echo isset($_POST['username']) ? InputValidator::escapeHtml($_POST['username']) : ''; ?>"
+                    value="<?php echo InputValidator::getPostValue('username'); ?>"
                 >
             </div>
             
@@ -101,7 +101,7 @@ require_once __DIR__ . '/../templates/header.php';
                     name="email" 
                     required 
                     autocomplete="email"
-                    value="<?php echo isset($_POST['email']) ? InputValidator::escapeHtml($_POST['email']) : ''; ?>"
+                    value="<?php echo InputValidator::getPostValue('email'); ?>"
                 >
             </div>
             
