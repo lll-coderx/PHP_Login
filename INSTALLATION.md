@@ -8,7 +8,7 @@ This guide will walk you through setting up the secure PHP login system from scr
 
 Before you begin, ensure you have:
 
-- **PHP 8.1 or higher** installed
+- **PHP 8.4 or higher** installed
 - **MySQL 8.0+** or **MariaDB 10.5+**
 - **Apache** with mod_rewrite enabled
 - **Composer** for dependency management
@@ -20,7 +20,7 @@ Before you begin, ensure you have:
 php --version
 ```
 
-You should see PHP 8.1.0 or higher.
+You should see PHP 8.4.0 or higher.
 
 ### Check Required PHP Extensions
 

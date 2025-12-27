@@ -84,13 +84,13 @@ class Database
         
         foreach ($lines as $line) {
             // Skip comments
-            if (strpos(trim($line), '#') === 0) {
+            if (str_starts_with(trim($line), '#')) {
                 continue;
             }
             
             // Parse KEY=VALUE
-            if (strpos($line, '=') !== false) {
-                list($key, $value) = explode('=', $line, 2);
+            if (str_contains($line, '=')) {
+                [$key, $value] = explode('=', $line, 2);
                 $key = trim($key);
                 $value = trim($value);
                 
@@ -105,14 +105,14 @@ class Database
     /**
      * Prevent cloning of the instance
      */
-    private function __clone()
+    private function __clone(): void
     {
     }
     
     /**
      * Prevent unserialization of the instance
      */
-    public function __wakeup()
+    public function __wakeup(): void
     {
         throw new Exception("Cannot unserialize singleton");
     }

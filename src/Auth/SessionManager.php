@@ -95,7 +95,7 @@ class SessionManager
      * @param mixed $value Variable value
      * @return void
      */
-    public static function set(string $key, $value): void
+    public static function set(string $key, mixed $value): void
     {
         $_SESSION[$key] = $value;
     }
@@ -107,7 +107,7 @@ class SessionManager
      * @param mixed $default Default value if key not found
      * @return mixed Variable value or default
      */
-    public static function get(string $key, $default = null)
+    public static function get(string $key, mixed $default = null): mixed
     {
         return $_SESSION[$key] ?? $default;
     }

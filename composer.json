@@ -3,8 +3,8 @@
     "description": "Secure PHP Login and Password Reset System with OWASP Top 10 Security",
     "type": "project",
     "require": {
-        "php": ">=8.1",
-        "phpmailer/phpmailer": "^6.8"
+        "php": ">=8.4",
+        "phpmailer/phpmailer": "^6.9"
     },
     "autoload": {
         "psr-4": {

@@ -23,12 +23,12 @@ class Config
                 $lines = file($envFile, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
                 
                 foreach ($lines as $line) {
-                    if (strpos(trim($line), '#') === 0) {
+                    if (str_starts_with(trim($line), '#')) {
                         continue;
                     }
                     
-                    if (strpos($line, '=') !== false) {
-                        list($key, $value) = explode('=', $line, 2);
+                    if (str_contains($line, '=')) {
+                        [$key, $value] = explode('=', $line, 2);
                         $key = trim($key);
                         $value = trim($value);
                         
@@ -74,7 +74,7 @@ class Config
      * @param mixed $default Default value if key not found
      * @return mixed Configuration value
      */
-    public static function get(string $key, $default = null)
+    public static function get(string $key, mixed $default = null): mixed
     {
         self::load();
         

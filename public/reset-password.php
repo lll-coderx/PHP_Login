@@ -96,7 +96,7 @@ require_once __DIR__ . '/../templates/header.php';
     <?php if ($error): ?>
         <div class="alert alert-error">
             <?php echo InputValidator::escapeHtml($error); ?>
-            <?php if (strpos($error, 'Invalid or expired') !== false): ?>
+            <?php if (str_contains($error, 'Invalid or expired')): ?>
                 <p style="margin-top: 1rem;">
                     <a href="/public/forgot-password.php">Request a new reset link</a>
                 </p>
@@ -111,7 +111,7 @@ require_once __DIR__ . '/../templates/header.php';
                 <a href="/public/login.php">Click here to login</a>
             </p>
         </div>
-    <?php elseif (!$error || strpos($error, 'Invalid or expired') === false): ?>
+    <?php elseif (!$error || !str_contains($error, 'Invalid or expired')): ?>
         <form method="POST" action="">
             <input type="hidden" name="csrf_token" value="<?php echo InputValidator::generateCsrfToken(); ?>">
             

@@ -148,7 +148,7 @@ class RateLimiter
                 $ip = $_SERVER[$header];
                 
                 // Handle comma-separated IPs
-                if (strpos($ip, ',') !== false) {
+                if (str_contains($ip, ',')) {
                     $ip = explode(',', $ip)[0];
                 }
                 

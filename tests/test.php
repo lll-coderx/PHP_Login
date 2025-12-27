@@ -38,7 +38,7 @@ echo "✓ Password validation works\n";
 // Test HTML escaping
 $unsafe = '<script>alert("XSS")</script>';
 $safe = InputValidator::escapeHtml($unsafe);
-assert(strpos($safe, '<script>') === false, 'Script tags should be escaped');
+assert(!str_contains($safe, '<script>'), 'Script tags should be escaped');
 echo "✓ HTML escaping works\n";
 
 echo "\n";
