@@ -1,0 +1,700 @@
+df@df:~$ ./setup.sh
+Enter your EC2 Public IP: 74.176.217.151
+🚀 Starting installation...
+📦 Updating system...
+Hit:1 http://azure.archive.ubuntu.com/ubuntu noble InRelease
+Hit:2 http://azure.archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:3 http://azure.archive.ubuntu.com/ubuntu noble-backports InRelease
+Hit:4 http://azure.archive.ubuntu.com/ubuntu noble-security InRelease
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+All packages are up to date.
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Calculating upgrade... Done
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+🌐 Installing Apache...
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  apache2-bin apache2-data apache2-utils libapr1t64 libaprutil1-dbd-sqlite3
+  libaprutil1-ldap libaprutil1t64 liblua5.4-0 ssl-cert
+Suggested packages:
+  apache2-doc apache2-suexec-pristine | apache2-suexec-custom www-browser
+The following NEW packages will be installed:
+  apache2 apache2-bin apache2-data apache2-utils libapr1t64
+  libaprutil1-dbd-sqlite3 libaprutil1-ldap libaprutil1t64 liblua5.4-0
+  ssl-cert
+0 upgraded, 10 newly installed, 0 to remove and 0 not upgraded.
+Need to get 2086 kB of archives.
+After this operation, 8090 kB of additional disk space will be used.
+Get:1 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 libapr1t64 amd64 1.7.2-3.1ubuntu0.1 [108 kB]
+Get:2 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 libaprutil1t64 amd64 1.6.3-1.1ubuntu7 [91.9 kB]
+Get:3 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 libaprutil1-dbd-sqlite3 amd64 1.6.3-1.1ubuntu7 [11.2 kB]
+Get:4 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 libaprutil1-ldap amd64 1.6.3-1.1ubuntu7 [9116 B]
+Get:5 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 liblua5.4-0 amd64 5.4.6-3build2 [166 kB]
+Get:6 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 apache2-bin amd64 2.4.58-1ubuntu8.8 [1331 kB]
+Get:7 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 apache2-data all 2.4.58-1ubuntu8.8 [163 kB]
+Get:8 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 apache2-utils amd64 2.4.58-1ubuntu8.8 [97.7 kB]
+Get:9 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 apache2 amd64 2.4.58-1ubuntu8.8 [90.2 kB]
+Get:10 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 ssl-cert all 1.1.2ubuntu1 [17.8 kB]
+Fetched 2086 kB in 1s (1637 kB/s)
+Preconfiguring packages ...
+Selecting previously unselected package libapr1t64:amd64.
+(Reading database ... 88852 files and directories currently installed.)
+Preparing to unpack .../0-libapr1t64_1.7.2-3.1ubuntu0.1_amd64.deb ...
+Unpacking libapr1t64:amd64 (1.7.2-3.1ubuntu0.1) ...
+Selecting previously unselected package libaprutil1t64:amd64.
+Preparing to unpack .../1-libaprutil1t64_1.6.3-1.1ubuntu7_amd64.deb ...
+Unpacking libaprutil1t64:amd64 (1.6.3-1.1ubuntu7) ...
+Selecting previously unselected package libaprutil1-dbd-sqlite3:amd64.
+Preparing to unpack .../2-libaprutil1-dbd-sqlite3_1.6.3-1.1ubuntu7_amd64.deb ...
+Unpacking libaprutil1-dbd-sqlite3:amd64 (1.6.3-1.1ubuntu7) ...
+Selecting previously unselected package libaprutil1-ldap:amd64.
+Preparing to unpack .../3-libaprutil1-ldap_1.6.3-1.1ubuntu7_amd64.deb ...
+Unpacking libaprutil1-ldap:amd64 (1.6.3-1.1ubuntu7) ...
+Selecting previously unselected package liblua5.4-0:amd64.
+Preparing to unpack .../4-liblua5.4-0_5.4.6-3build2_amd64.deb ...
+Unpacking liblua5.4-0:amd64 (5.4.6-3build2) ...
+Selecting previously unselected package apache2-bin.
+Preparing to unpack .../5-apache2-bin_2.4.58-1ubuntu8.8_amd64.deb ...
+Unpacking apache2-bin (2.4.58-1ubuntu8.8) ...
+Selecting previously unselected package apache2-data.
+Preparing to unpack .../6-apache2-data_2.4.58-1ubuntu8.8_all.deb ...
+Unpacking apache2-data (2.4.58-1ubuntu8.8) ...
+Selecting previously unselected package apache2-utils.
+Preparing to unpack .../7-apache2-utils_2.4.58-1ubuntu8.8_amd64.deb ...
+Unpacking apache2-utils (2.4.58-1ubuntu8.8) ...
+Selecting previously unselected package apache2.
+Preparing to unpack .../8-apache2_2.4.58-1ubuntu8.8_amd64.deb ...
+Unpacking apache2 (2.4.58-1ubuntu8.8) ...
+Selecting previously unselected package ssl-cert.
+Preparing to unpack .../9-ssl-cert_1.1.2ubuntu1_all.deb ...
+Unpacking ssl-cert (1.1.2ubuntu1) ...
+Setting up ssl-cert (1.1.2ubuntu1) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/ssl-cert.service → /usr/lib/systemd/system/ssl-cert.service.
+Setting up libapr1t64:amd64 (1.7.2-3.1ubuntu0.1) ...
+Setting up liblua5.4-0:amd64 (5.4.6-3build2) ...
+Setting up apache2-data (2.4.58-1ubuntu8.8) ...
+Setting up libaprutil1t64:amd64 (1.6.3-1.1ubuntu7) ...
+Setting up libaprutil1-ldap:amd64 (1.6.3-1.1ubuntu7) ...
+Setting up libaprutil1-dbd-sqlite3:amd64 (1.6.3-1.1ubuntu7) ...
+Setting up apache2-utils (2.4.58-1ubuntu8.8) ...
+Setting up apache2-bin (2.4.58-1ubuntu8.8) ...
+Setting up apache2 (2.4.58-1ubuntu8.8) ...
+Enabling module mpm_event.
+Enabling module authz_core.
+Enabling module authz_host.
+Enabling module authn_core.
+Enabling module auth_basic.
+Enabling module access_compat.
+Enabling module authn_file.
+Enabling module authz_user.
+Enabling module alias.
+Enabling module dir.
+Enabling module autoindex.
+Enabling module env.
+Enabling module mime.
+Enabling module negotiation.
+Enabling module setenvif.
+Enabling module filter.
+Enabling module deflate.
+Enabling module status.
+Enabling module reqtimeout.
+Enabling conf charset.
+Enabling conf localized-error-pages.
+Enabling conf other-vhosts-access-log.
+Enabling conf security.
+Enabling conf serve-cgi-bin.
+Enabling site 000-default.
+Created symlink /etc/systemd/system/multi-user.target.wants/apache2.service → /usr/lib/systemd/system/apache2.service.
+Created symlink /etc/systemd/system/multi-user.target.wants/apache-htcacheclean.service → /usr/lib/systemd/system/apache-htcacheclean.service.
+Processing triggers for ufw (0.36.2-6) ...
+Processing triggers for man-db (2.12.0-4build2) ...
+Processing triggers for libc-bin (2.39-0ubuntu8.6) ...
+Scanning processes...
+Scanning linux images...
+
+Running kernel seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+Synchronizing state of apache2.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install enable apache2
+🐘 Installing PHP 8.4...
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+software-properties-common is already the newest version (0.99.49.3).
+software-properties-common set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+PPA publishes dbgsym, you may need to include 'main/debug' component
+Repository: 'Types: deb
+URIs: https://ppa.launchpadcontent.net/ondrej/php/ubuntu/
+Suites: noble
+Components: main
+'
+Description:
+Co-installable PHP versions: PHP 5.6, PHP 7.x, PHP 8.x and most requested extensions are included. Packages are provided for *Current* Ubuntu *LTS* releases (https://wiki.ubuntu.com/Releases).  Expanded Security Maintenance releases ARE NOT supported.
+
+Debian stable, oldstable and Debian LTS packages are provided from a separate repository: https://deb.sury.org/#debian-dpa
+
+You can get more information about the packages at https://deb.sury.org
+
+BUGS&FEATURES: This PPA has a issue tracker:
+https://deb.sury.org/#bug-reporting
+
+Issues reported in a private email don't scale and most likely will be ignored.  I simply don't have capacity to answer questions privately.
+
+CAVEATS:
+1. If you are using apache2, you are advised to add ppa:ondrej/apache2
+2. If you are using nginx, you are advised to add ppa:ondrej/nginx
+
+DONATION: If you like my work and you want to show appreciation, please consider donating regularly: https://donate.sury.org/
+
+COMMERCIAL SUPPORT: Support for PHP packages for older Debian and Ubuntu release can be bought from https://www.freexian.com/lts/php/
+More info: https://launchpad.net/~ondrej/+archive/ubuntu/php
+Adding repository.
+Hit:1 http://azure.archive.ubuntu.com/ubuntu noble InRelease
+Hit:2 http://azure.archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:3 http://azure.archive.ubuntu.com/ubuntu noble-backports InRelease
+Hit:4 http://azure.archive.ubuntu.com/ubuntu noble-security InRelease
+Get:5 https://ppa.launchpadcontent.net/ondrej/php/ubuntu noble InRelease [24.3 kB]
+Get:6 https://ppa.launchpadcontent.net/ondrej/php/ubuntu noble/main amd64 Packages [143 kB]
+Get:7 https://ppa.launchpadcontent.net/ondrej/php/ubuntu noble/main Translation-en [43.7 kB]
+Fetched 211 kB in 3s (71.9 kB/s)
+Reading package lists... Done
+Hit:1 http://azure.archive.ubuntu.com/ubuntu noble InRelease
+Hit:2 http://azure.archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:3 http://azure.archive.ubuntu.com/ubuntu noble-backports InRelease
+Hit:4 http://azure.archive.ubuntu.com/ubuntu noble-security InRelease
+Hit:5 https://ppa.launchpadcontent.net/ondrej/php/ubuntu noble InRelease
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+1 package can be upgraded. Run 'apt list --upgradable' to see it.
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  libzip4t64 php-common php8.4-opcache php8.4-readline
+Suggested packages:
+  php-pear
+The following NEW packages will be installed:
+  libapache2-mod-php8.4 libzip4t64 php-common php8.4 php8.4-bcmath php8.4-cli
+  php8.4-common php8.4-curl php8.4-gd php8.4-intl php8.4-mbstring
+  php8.4-mysql php8.4-opcache php8.4-readline php8.4-xml php8.4-zip
+0 upgraded, 16 newly installed, 0 to remove and 1 not upgraded.
+Need to get 6928 kB of archives.
+After this operation, 29.2 MB of additional disk space will be used.
+Get:1 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 libzip4t64 amd64 1.7.3-1.1ubuntu2 [53.6 kB]
+Get:2 https://ppa.launchpadcontent.net/ondrej/php/ubuntu noble/main amd64 php-common all 2:100~+ubuntu24.04.1+deb.sury.org+1 [13.9 kB]
+Get:3 https://ppa.launchpadcontent.net/ondrej/php/ubuntu noble/main amd64 php8.4-common amd64 8.4.16-1+ubuntu24.04.1+deb.sury.org+1 [809 kB]
+Get:4 https://ppa.launchpadcontent.net/ondrej/php/ubuntu noble/main amd64 php8.4-opcache amd64 8.4.16-1+ubuntu24.04.1+deb.sury.org+1 [486 kB]
+Get:5 https://ppa.launchpadcontent.net/ondrej/php/ubuntu noble/main amd64 php8.4-readline amd64 8.4.16-1+ubuntu24.04.1+deb.sury.org+1 [13.7 kB]
+Get:6 https://ppa.launchpadcontent.net/ondrej/php/ubuntu noble/main amd64 php8.4-cli amd64 8.4.16-1+ubuntu24.04.1+deb.sury.org+1 [1994 kB]
+Get:7 https://ppa.launchpadcontent.net/ondrej/php/ubuntu noble/main amd64 libapache2-mod-php8.4 amd64 8.4.16-1+ubuntu24.04.1+deb.sury.org+1 [1919 kB]
+Get:8 https://ppa.launchpadcontent.net/ondrej/php/ubuntu noble/main amd64 php8.4 all 8.4.16-1+ubuntu24.04.1+deb.sury.org+1 [42.9 kB]
+Get:9 https://ppa.launchpadcontent.net/ondrej/php/ubuntu noble/main amd64 php8.4-bcmath amd64 8.4.16-1+ubuntu24.04.1+deb.sury.org+1 [28.3 kB]
+Get:10 https://ppa.launchpadcontent.net/ondrej/php/ubuntu noble/main amd64 php8.4-curl amd64 8.4.16-1+ubuntu24.04.1+deb.sury.org+1 [43.4 kB]
+Get:11 https://ppa.launchpadcontent.net/ondrej/php/ubuntu noble/main amd64 php8.4-gd amd64 8.4.16-1+ubuntu24.04.1+deb.sury.org+1 [38.5 kB]
+Get:12 https://ppa.launchpadcontent.net/ondrej/php/ubuntu noble/main amd64 php8.4-intl amd64 8.4.16-1+ubuntu24.04.1+deb.sury.org+1 [171 kB]
+Get:13 https://ppa.launchpadcontent.net/ondrej/php/ubuntu noble/main amd64 php8.4-mbstring amd64 8.4.16-1+ubuntu24.04.1+deb.sury.org+1 [519 kB]
+Get:14 https://ppa.launchpadcontent.net/ondrej/php/ubuntu noble/main amd64 php8.4-mysql amd64 8.4.16-1+ubuntu24.04.1+deb.sury.org+1 [129 kB]
+Get:15 https://ppa.launchpadcontent.net/ondrej/php/ubuntu noble/main amd64 php8.4-xml amd64 8.4.16-1+ubuntu24.04.1+deb.sury.org+1 [635 kB]
+Get:16 https://ppa.launchpadcontent.net/ondrej/php/ubuntu noble/main amd64 php8.4-zip amd64 8.4.16-1+ubuntu24.04.1+deb.sury.org+1 [30.6 kB]
+Fetched 6928 kB in 4s (1896 kB/s)
+Selecting previously unselected package php-common.
+(Reading database ... 89573 files and directories currently installed.)
+Preparing to unpack .../00-php-common_2%3a100~+ubuntu24.04.1+deb.sury.org+1_all.deb ...
+Unpacking php-common (2:100~+ubuntu24.04.1+deb.sury.org+1) ...
+Selecting previously unselected package php8.4-common.
+Preparing to unpack .../01-php8.4-common_8.4.16-1+ubuntu24.04.1+deb.sury.org+1_amd64.deb ...
+Unpacking php8.4-common (8.4.16-1+ubuntu24.04.1+deb.sury.org+1) ...
+Selecting previously unselected package php8.4-opcache.
+Preparing to unpack .../02-php8.4-opcache_8.4.16-1+ubuntu24.04.1+deb.sury.org+1_amd64.deb ...
+Unpacking php8.4-opcache (8.4.16-1+ubuntu24.04.1+deb.sury.org+1) ...
+Selecting previously unselected package php8.4-readline.
+Preparing to unpack .../03-php8.4-readline_8.4.16-1+ubuntu24.04.1+deb.sury.org+1_amd64.deb ...
+Unpacking php8.4-readline (8.4.16-1+ubuntu24.04.1+deb.sury.org+1) ...
+Selecting previously unselected package php8.4-cli.
+Preparing to unpack .../04-php8.4-cli_8.4.16-1+ubuntu24.04.1+deb.sury.org+1_amd64.deb ...
+Unpacking php8.4-cli (8.4.16-1+ubuntu24.04.1+deb.sury.org+1) ...
+Selecting previously unselected package libapache2-mod-php8.4.
+Preparing to unpack .../05-libapache2-mod-php8.4_8.4.16-1+ubuntu24.04.1+deb.sury.org+1_amd64.deb ...
+Unpacking libapache2-mod-php8.4 (8.4.16-1+ubuntu24.04.1+deb.sury.org+1) ...
+Selecting previously unselected package libzip4t64:amd64.
+Preparing to unpack .../06-libzip4t64_1.7.3-1.1ubuntu2_amd64.deb ...
+Unpacking libzip4t64:amd64 (1.7.3-1.1ubuntu2) ...
+Selecting previously unselected package php8.4.
+Preparing to unpack .../07-php8.4_8.4.16-1+ubuntu24.04.1+deb.sury.org+1_all.deb ...
+Unpacking php8.4 (8.4.16-1+ubuntu24.04.1+deb.sury.org+1) ...
+Selecting previously unselected package php8.4-bcmath.
+Preparing to unpack .../08-php8.4-bcmath_8.4.16-1+ubuntu24.04.1+deb.sury.org+1_amd64.deb ...
+Unpacking php8.4-bcmath (8.4.16-1+ubuntu24.04.1+deb.sury.org+1) ...
+Selecting previously unselected package php8.4-curl.
+Preparing to unpack .../09-php8.4-curl_8.4.16-1+ubuntu24.04.1+deb.sury.org+1_amd64.deb ...
+Unpacking php8.4-curl (8.4.16-1+ubuntu24.04.1+deb.sury.org+1) ...
+Selecting previously unselected package php8.4-gd.
+Preparing to unpack .../10-php8.4-gd_8.4.16-1+ubuntu24.04.1+deb.sury.org+1_amd64.deb ...
+Unpacking php8.4-gd (8.4.16-1+ubuntu24.04.1+deb.sury.org+1) ...
+Selecting previously unselected package php8.4-intl.
+Preparing to unpack .../11-php8.4-intl_8.4.16-1+ubuntu24.04.1+deb.sury.org+1_amd64.deb ...
+Unpacking php8.4-intl (8.4.16-1+ubuntu24.04.1+deb.sury.org+1) ...
+Selecting previously unselected package php8.4-mbstring.
+Preparing to unpack .../12-php8.4-mbstring_8.4.16-1+ubuntu24.04.1+deb.sury.org+1_amd64.deb ...
+Unpacking php8.4-mbstring (8.4.16-1+ubuntu24.04.1+deb.sury.org+1) ...
+Selecting previously unselected package php8.4-mysql.
+Preparing to unpack .../13-php8.4-mysql_8.4.16-1+ubuntu24.04.1+deb.sury.org+1_amd64.deb ...
+Unpacking php8.4-mysql (8.4.16-1+ubuntu24.04.1+deb.sury.org+1) ...
+Selecting previously unselected package php8.4-xml.
+Preparing to unpack .../14-php8.4-xml_8.4.16-1+ubuntu24.04.1+deb.sury.org+1_amd64.deb ...
+Unpacking php8.4-xml (8.4.16-1+ubuntu24.04.1+deb.sury.org+1) ...
+Selecting previously unselected package php8.4-zip.
+Preparing to unpack .../15-php8.4-zip_8.4.16-1+ubuntu24.04.1+deb.sury.org+1_amd64.deb ...
+Unpacking php8.4-zip (8.4.16-1+ubuntu24.04.1+deb.sury.org+1) ...
+Setting up php-common (2:100~+ubuntu24.04.1+deb.sury.org+1) ...
+Created symlink /etc/systemd/system/timers.target.wants/phpsessionclean.timer → /usr/lib/systemd/system/phpsessionclean.timer.
+Setting up php8.4-common (8.4.16-1+ubuntu24.04.1+deb.sury.org+1) ...
+
+Creating config file /etc/php/8.4/mods-available/calendar.ini with new version
+
+Creating config file /etc/php/8.4/mods-available/ctype.ini with new version
+
+Creating config file /etc/php/8.4/mods-available/exif.ini with new version
+
+Creating config file /etc/php/8.4/mods-available/fileinfo.ini with new version
+
+Creating config file /etc/php/8.4/mods-available/ffi.ini with new version
+
+Creating config file /etc/php/8.4/mods-available/ftp.ini with new version
+
+Creating config file /etc/php/8.4/mods-available/gettext.ini with new version
+
+Creating config file /etc/php/8.4/mods-available/iconv.ini with new version
+
+Creating config file /etc/php/8.4/mods-available/pdo.ini with new version
+
+Creating config file /etc/php/8.4/mods-available/phar.ini with new version
+
+Creating config file /etc/php/8.4/mods-available/posix.ini with new version
+
+Creating config file /etc/php/8.4/mods-available/shmop.ini with new version
+
+Creating config file /etc/php/8.4/mods-available/sockets.ini with new version
+
+Creating config file /etc/php/8.4/mods-available/sysvmsg.ini with new version
+
+Creating config file /etc/php/8.4/mods-available/sysvsem.ini with new version
+
+Creating config file /etc/php/8.4/mods-available/sysvshm.ini with new version
+
+Creating config file /etc/php/8.4/mods-available/tokenizer.ini with new version
+Setting up php8.4-gd (8.4.16-1+ubuntu24.04.1+deb.sury.org+1) ...
+
+Creating config file /etc/php/8.4/mods-available/gd.ini with new version
+Setting up php8.4-curl (8.4.16-1+ubuntu24.04.1+deb.sury.org+1) ...
+
+Creating config file /etc/php/8.4/mods-available/curl.ini with new version
+Setting up php8.4-bcmath (8.4.16-1+ubuntu24.04.1+deb.sury.org+1) ...
+
+Creating config file /etc/php/8.4/mods-available/bcmath.ini with new version
+Setting up php8.4-xml (8.4.16-1+ubuntu24.04.1+deb.sury.org+1) ...
+
+Creating config file /etc/php/8.4/mods-available/dom.ini with new version
+
+Creating config file /etc/php/8.4/mods-available/simplexml.ini with new version
+
+Creating config file /etc/php/8.4/mods-available/xml.ini with new version
+
+Creating config file /etc/php/8.4/mods-available/xmlreader.ini with new version
+
+Creating config file /etc/php/8.4/mods-available/xmlwriter.ini with new version
+
+Creating config file /etc/php/8.4/mods-available/xsl.ini with new version
+Setting up libzip4t64:amd64 (1.7.3-1.1ubuntu2) ...
+Setting up php8.4-opcache (8.4.16-1+ubuntu24.04.1+deb.sury.org+1) ...
+
+Creating config file /etc/php/8.4/mods-available/opcache.ini with new version
+Setting up php8.4-intl (8.4.16-1+ubuntu24.04.1+deb.sury.org+1) ...
+
+Creating config file /etc/php/8.4/mods-available/intl.ini with new version
+Setting up php8.4-readline (8.4.16-1+ubuntu24.04.1+deb.sury.org+1) ...
+
+Creating config file /etc/php/8.4/mods-available/readline.ini with new version
+Setting up php8.4-mbstring (8.4.16-1+ubuntu24.04.1+deb.sury.org+1) ...
+
+Creating config file /etc/php/8.4/mods-available/mbstring.ini with new version
+Setting up php8.4-mysql (8.4.16-1+ubuntu24.04.1+deb.sury.org+1) ...
+
+Creating config file /etc/php/8.4/mods-available/mysqlnd.ini with new version
+
+Creating config file /etc/php/8.4/mods-available/mysqli.ini with new version
+
+Creating config file /etc/php/8.4/mods-available/pdo_mysql.ini with new version
+Setting up php8.4-zip (8.4.16-1+ubuntu24.04.1+deb.sury.org+1) ...
+
+Creating config file /etc/php/8.4/mods-available/zip.ini with new version
+Setting up php8.4-cli (8.4.16-1+ubuntu24.04.1+deb.sury.org+1) ...
+update-alternatives: using /usr/bin/php8.4 to provide /usr/bin/php (php) in auto mode
+update-alternatives: using /usr/bin/phar8.4 to provide /usr/bin/phar (phar) in auto mode
+update-alternatives: using /usr/bin/phar.phar8.4 to provide /usr/bin/phar.phar (phar.phar) in auto mode
+
+Creating config file /etc/php/8.4/cli/php.ini with new version
+Setting up libapache2-mod-php8.4 (8.4.16-1+ubuntu24.04.1+deb.sury.org+1) ...
+
+Creating config file /etc/php/8.4/apache2/php.ini with new version
+Module mpm_event disabled.
+Enabling module mpm_prefork.
+apache2_switch_mpm Switch to prefork
+apache2_invoke: Enable module php8.4
+Setting up php8.4 (8.4.16-1+ubuntu24.04.1+deb.sury.org+1) ...
+Processing triggers for man-db (2.12.0-4build2) ...
+Processing triggers for libc-bin (2.39-0ubuntu8.6) ...
+Processing triggers for php8.4-cli (8.4.16-1+ubuntu24.04.1+deb.sury.org+1) ...
+Processing triggers for libapache2-mod-php8.4 (8.4.16-1+ubuntu24.04.1+deb.sury.org+1) ...
+Scanning processes...
+Scanning linux images...
+
+Running kernel seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+🗄️ Installing MySQL...
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  libcgi-fast-perl libcgi-pm-perl libclone-perl libencode-locale-perl
+  libevent-pthreads-2.1-7t64 libfcgi-bin libfcgi-perl libfcgi0t64
+  libhtml-parser-perl libhtml-tagset-perl libhtml-template-perl
+  libhttp-date-perl libhttp-message-perl libio-html-perl
+  liblwp-mediatypes-perl libmecab2 libprotobuf-lite32t64 libtimedate-perl
+  liburi-perl mecab-ipadic mecab-ipadic-utf8 mecab-utils mysql-client-8.0
+  mysql-client-core-8.0 mysql-common mysql-server-8.0 mysql-server-core-8.0
+Suggested packages:
+  libdata-dump-perl libipc-sharedcache-perl libio-compress-brotli-perl
+  libbusiness-isbn-perl libregexp-ipv6-perl libwww-perl mailx tinyca
+The following NEW packages will be installed:
+  libcgi-fast-perl libcgi-pm-perl libclone-perl libencode-locale-perl
+  libevent-pthreads-2.1-7t64 libfcgi-bin libfcgi-perl libfcgi0t64
+  libhtml-parser-perl libhtml-tagset-perl libhtml-template-perl
+  libhttp-date-perl libhttp-message-perl libio-html-perl
+  liblwp-mediatypes-perl libmecab2 libprotobuf-lite32t64 libtimedate-perl
+  liburi-perl mecab-ipadic mecab-ipadic-utf8 mecab-utils mysql-client-8.0
+  mysql-client-core-8.0 mysql-common mysql-server mysql-server-8.0
+  mysql-server-core-8.0
+0 upgraded, 28 newly installed, 0 to remove and 1 not upgraded.
+Need to get 29.6 MB of archives.
+After this operation, 243 MB of additional disk space will be used.
+Get:1 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 mysql-common all 5.8+1.1.0build1 [6746 B]
+Get:2 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 mysql-client-core-8.0 amd64 8.0.44-0ubuntu0.24.04.2 [2740 kB]
+Get:3 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 mysql-client-8.0 amd64 8.0.44-0ubuntu0.24.04.2 [22.5 kB]
+Get:4 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 libevent-pthreads-2.1-7t64 amd64 2.1.12-stable-9ubuntu2 [7982 B]
+Get:5 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 libmecab2 amd64 0.996-14ubuntu4 [201 kB]
+Get:6 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 libprotobuf-lite32t64 amd64 3.21.12-8.2ubuntu0.2 [238 kB]
+Get:7 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 mysql-server-core-8.0 amd64 8.0.44-0ubuntu0.24.04.2 [17.5 MB]
+Get:8 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 mysql-server-8.0 amd64 8.0.44-0ubuntu0.24.04.2 [1441 kB]
+Get:9 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 libhtml-tagset-perl all 3.20-6 [11.3 kB]
+Get:10 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 liburi-perl all 5.27-1 [88.0 kB]
+Get:11 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 libhtml-parser-perl amd64 3.81-1build3 [85.8 kB]
+Get:12 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 libcgi-pm-perl all 4.63-1 [185 kB]
+Get:13 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 libfcgi0t64 amd64 2.4.2-2.1ubuntu0.24.04.1 [27.0 kB]
+Get:14 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 libfcgi-perl amd64 0.82+ds-3build2 [21.7 kB]
+Get:15 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 libcgi-fast-perl all 1:2.17-1 [10.3 kB]
+Get:16 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 libclone-perl amd64 0.46-1build3 [10.7 kB]
+Get:17 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 libencode-locale-perl all 1.05-3 [11.6 kB]
+Get:18 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 libfcgi-bin amd64 2.4.2-2.1ubuntu0.24.04.1 [11.2 kB]
+Get:19 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 libhtml-template-perl all 2.97-2 [60.2 kB]
+Get:20 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 libtimedate-perl all 2.3300-2 [34.0 kB]
+Get:21 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 libhttp-date-perl all 6.06-1 [10.2 kB]
+Get:22 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 libio-html-perl all 1.004-3 [15.9 kB]
+Get:23 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 liblwp-mediatypes-perl all 6.04-2 [20.1 kB]
+Get:24 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 libhttp-message-perl all 6.45-1ubuntu1 [78.2 kB]
+Get:25 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 mecab-utils amd64 0.996-14ubuntu4 [4804 B]
+Get:26 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 mecab-ipadic all 2.7.0-20070801+main-3 [6718 kB]
+Get:27 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 mecab-ipadic-utf8 all 2.7.0-20070801+main-3 [4384 B]
+Get:28 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 mysql-server all 8.0.44-0ubuntu0.24.04.2 [9524 B]
+Fetched 29.6 MB in 4s (7728 kB/s)
+Preconfiguring packages ...
+Selecting previously unselected package mysql-common.
+(Reading database ... 89794 files and directories currently installed.)
+Preparing to unpack .../0-mysql-common_5.8+1.1.0build1_all.deb ...
+Unpacking mysql-common (5.8+1.1.0build1) ...
+Selecting previously unselected package mysql-client-core-8.0.
+Preparing to unpack .../1-mysql-client-core-8.0_8.0.44-0ubuntu0.24.04.2_amd64.deb ...
+Unpacking mysql-client-core-8.0 (8.0.44-0ubuntu0.24.04.2) ...
+Selecting previously unselected package mysql-client-8.0.
+Preparing to unpack .../2-mysql-client-8.0_8.0.44-0ubuntu0.24.04.2_amd64.deb ...
+Unpacking mysql-client-8.0 (8.0.44-0ubuntu0.24.04.2) ...
+Selecting previously unselected package libevent-pthreads-2.1-7t64:amd64.
+Preparing to unpack .../3-libevent-pthreads-2.1-7t64_2.1.12-stable-9ubuntu2_amd64.deb ...
+Unpacking libevent-pthreads-2.1-7t64:amd64 (2.1.12-stable-9ubuntu2) ...
+Selecting previously unselected package libmecab2:amd64.
+Preparing to unpack .../4-libmecab2_0.996-14ubuntu4_amd64.deb ...
+Unpacking libmecab2:amd64 (0.996-14ubuntu4) ...
+Selecting previously unselected package libprotobuf-lite32t64:amd64.
+Preparing to unpack .../5-libprotobuf-lite32t64_3.21.12-8.2ubuntu0.2_amd64.deb ...
+Unpacking libprotobuf-lite32t64:amd64 (3.21.12-8.2ubuntu0.2) ...
+Selecting previously unselected package mysql-server-core-8.0.
+Preparing to unpack .../6-mysql-server-core-8.0_8.0.44-0ubuntu0.24.04.2_amd64.deb ...
+Unpacking mysql-server-core-8.0 (8.0.44-0ubuntu0.24.04.2) ...
+Setting up mysql-common (5.8+1.1.0build1) ...
+update-alternatives: using /etc/mysql/my.cnf.fallback to provide /etc/mysql/my.cnf (my.cnf) in auto mode
+Selecting previously unselected package mysql-server-8.0.
+(Reading database ... 90013 files and directories currently installed.)
+Preparing to unpack .../00-mysql-server-8.0_8.0.44-0ubuntu0.24.04.2_amd64.deb ...
+Unpacking mysql-server-8.0 (8.0.44-0ubuntu0.24.04.2) ...
+Selecting previously unselected package libhtml-tagset-perl.
+Preparing to unpack .../01-libhtml-tagset-perl_3.20-6_all.deb ...
+Unpacking libhtml-tagset-perl (3.20-6) ...
+Selecting previously unselected package liburi-perl.
+Preparing to unpack .../02-liburi-perl_5.27-1_all.deb ...
+Unpacking liburi-perl (5.27-1) ...
+Selecting previously unselected package libhtml-parser-perl:amd64.
+Preparing to unpack .../03-libhtml-parser-perl_3.81-1build3_amd64.deb ...
+Unpacking libhtml-parser-perl:amd64 (3.81-1build3) ...
+Selecting previously unselected package libcgi-pm-perl.
+Preparing to unpack .../04-libcgi-pm-perl_4.63-1_all.deb ...
+Unpacking libcgi-pm-perl (4.63-1) ...
+Selecting previously unselected package libfcgi0t64:amd64.
+Preparing to unpack .../05-libfcgi0t64_2.4.2-2.1ubuntu0.24.04.1_amd64.deb ...
+Unpacking libfcgi0t64:amd64 (2.4.2-2.1ubuntu0.24.04.1) ...
+Selecting previously unselected package libfcgi-perl.
+Preparing to unpack .../06-libfcgi-perl_0.82+ds-3build2_amd64.deb ...
+Unpacking libfcgi-perl (0.82+ds-3build2) ...
+Selecting previously unselected package libcgi-fast-perl.
+Preparing to unpack .../07-libcgi-fast-perl_1%3a2.17-1_all.deb ...
+Unpacking libcgi-fast-perl (1:2.17-1) ...
+Selecting previously unselected package libclone-perl:amd64.
+Preparing to unpack .../08-libclone-perl_0.46-1build3_amd64.deb ...
+Unpacking libclone-perl:amd64 (0.46-1build3) ...
+Selecting previously unselected package libencode-locale-perl.
+Preparing to unpack .../09-libencode-locale-perl_1.05-3_all.deb ...
+Unpacking libencode-locale-perl (1.05-3) ...
+Selecting previously unselected package libfcgi-bin.
+Preparing to unpack .../10-libfcgi-bin_2.4.2-2.1ubuntu0.24.04.1_amd64.deb ...
+Unpacking libfcgi-bin (2.4.2-2.1ubuntu0.24.04.1) ...
+Selecting previously unselected package libhtml-template-perl.
+Preparing to unpack .../11-libhtml-template-perl_2.97-2_all.deb ...
+Unpacking libhtml-template-perl (2.97-2) ...
+Selecting previously unselected package libtimedate-perl.
+Preparing to unpack .../12-libtimedate-perl_2.3300-2_all.deb ...
+Unpacking libtimedate-perl (2.3300-2) ...
+Selecting previously unselected package libhttp-date-perl.
+Preparing to unpack .../13-libhttp-date-perl_6.06-1_all.deb ...
+Unpacking libhttp-date-perl (6.06-1) ...
+Selecting previously unselected package libio-html-perl.
+Preparing to unpack .../14-libio-html-perl_1.004-3_all.deb ...
+Unpacking libio-html-perl (1.004-3) ...
+Selecting previously unselected package liblwp-mediatypes-perl.
+Preparing to unpack .../15-liblwp-mediatypes-perl_6.04-2_all.deb ...
+Unpacking liblwp-mediatypes-perl (6.04-2) ...
+Selecting previously unselected package libhttp-message-perl.
+Preparing to unpack .../16-libhttp-message-perl_6.45-1ubuntu1_all.deb ...
+Unpacking libhttp-message-perl (6.45-1ubuntu1) ...
+Selecting previously unselected package mecab-utils.
+Preparing to unpack .../17-mecab-utils_0.996-14ubuntu4_amd64.deb ...
+Unpacking mecab-utils (0.996-14ubuntu4) ...
+Selecting previously unselected package mecab-ipadic.
+Preparing to unpack .../18-mecab-ipadic_2.7.0-20070801+main-3_all.deb ...
+Unpacking mecab-ipadic (2.7.0-20070801+main-3) ...
+Selecting previously unselected package mecab-ipadic-utf8.
+Preparing to unpack .../19-mecab-ipadic-utf8_2.7.0-20070801+main-3_all.deb ...
+Unpacking mecab-ipadic-utf8 (2.7.0-20070801+main-3) ...
+Selecting previously unselected package mysql-server.
+Preparing to unpack .../20-mysql-server_8.0.44-0ubuntu0.24.04.2_all.deb ...
+Unpacking mysql-server (8.0.44-0ubuntu0.24.04.2) ...
+Setting up libprotobuf-lite32t64:amd64 (3.21.12-8.2ubuntu0.2) ...
+Setting up libmecab2:amd64 (0.996-14ubuntu4) ...
+Setting up mysql-client-core-8.0 (8.0.44-0ubuntu0.24.04.2) ...
+Setting up libclone-perl:amd64 (0.46-1build3) ...
+Setting up libevent-pthreads-2.1-7t64:amd64 (2.1.12-stable-9ubuntu2) ...
+Setting up libfcgi0t64:amd64 (2.4.2-2.1ubuntu0.24.04.1) ...
+Setting up libhtml-tagset-perl (3.20-6) ...
+Setting up liblwp-mediatypes-perl (6.04-2) ...
+Setting up libfcgi-bin (2.4.2-2.1ubuntu0.24.04.1) ...
+Setting up libencode-locale-perl (1.05-3) ...
+Setting up mecab-utils (0.996-14ubuntu4) ...
+Setting up libio-html-perl (1.004-3) ...
+Setting up mysql-server-core-8.0 (8.0.44-0ubuntu0.24.04.2) ...
+Setting up libtimedate-perl (2.3300-2) ...
+Setting up mysql-client-8.0 (8.0.44-0ubuntu0.24.04.2) ...
+Setting up libfcgi-perl (0.82+ds-3build2) ...
+Setting up liburi-perl (5.27-1) ...
+Setting up mysql-server-8.0 (8.0.44-0ubuntu0.24.04.2) ...
+update-alternatives: using /etc/mysql/mysql.cnf to provide /etc/mysql/my.cnf (my.cnf) in auto mode
+Renaming removed key_buffer and myisam-recover options (if present)
+mysqld will log errors to /var/log/mysql/error.log
+mysqld is running as pid 16743
+Created symlink /etc/systemd/system/multi-user.target.wants/mysql.service → /usr/lib/systemd/system/mysql.service.
+Setting up libhttp-date-perl (6.06-1) ...
+Setting up mecab-ipadic (2.7.0-20070801+main-3) ...
+Compiling IPA dictionary for Mecab.  This takes long time...
+reading /usr/share/mecab/dic/ipadic/unk.def ... 40
+emitting double-array: 100% |###########################################|
+/usr/share/mecab/dic/ipadic/model.def is not found. skipped.
+reading /usr/share/mecab/dic/ipadic/Prefix.csv ... 221
+reading /usr/share/mecab/dic/ipadic/Noun.number.csv ... 42
+reading /usr/share/mecab/dic/ipadic/Verb.csv ... 130750
+reading /usr/share/mecab/dic/ipadic/Adverb.csv ... 3032
+reading /usr/share/mecab/dic/ipadic/Postp.csv ... 146
+reading /usr/share/mecab/dic/ipadic/Others.csv ... 2
+reading /usr/share/mecab/dic/ipadic/Noun.name.csv ... 34202
+reading /usr/share/mecab/dic/ipadic/Noun.nai.csv ... 42
+reading /usr/share/mecab/dic/ipadic/Auxil.csv ... 199
+reading /usr/share/mecab/dic/ipadic/Symbol.csv ... 208
+reading /usr/share/mecab/dic/ipadic/Noun.csv ... 60477
+reading /usr/share/mecab/dic/ipadic/Noun.adjv.csv ... 3328
+reading /usr/share/mecab/dic/ipadic/Suffix.csv ... 1393
+reading /usr/share/mecab/dic/ipadic/Postp-col.csv ... 91
+reading /usr/share/mecab/dic/ipadic/Adj.csv ... 27210
+reading /usr/share/mecab/dic/ipadic/Noun.demonst.csv ... 120
+reading /usr/share/mecab/dic/ipadic/Filler.csv ... 19
+reading /usr/share/mecab/dic/ipadic/Noun.proper.csv ... 27328
+reading /usr/share/mecab/dic/ipadic/Noun.org.csv ... 16668
+reading /usr/share/mecab/dic/ipadic/Noun.place.csv ... 72999
+reading /usr/share/mecab/dic/ipadic/Adnominal.csv ... 135
+reading /usr/share/mecab/dic/ipadic/Noun.verbal.csv ... 12146
+reading /usr/share/mecab/dic/ipadic/Noun.others.csv ... 151
+reading /usr/share/mecab/dic/ipadic/Noun.adverbal.csv ... 795
+reading /usr/share/mecab/dic/ipadic/Conjunction.csv ... 171
+reading /usr/share/mecab/dic/ipadic/Interjection.csv ... 252
+emitting double-array: 100% |###########################################|
+reading /usr/share/mecab/dic/ipadic/matrix.def ... 1316x1316
+emitting matrix      : 100% |###########################################|
+
+done!
+update-alternatives: using /var/lib/mecab/dic/ipadic to provide /var/lib/mecab/dic/debian (mecab-dictionary) in auto mode
+Setting up mecab-ipadic-utf8 (2.7.0-20070801+main-3) ...
+Compiling IPA dictionary for Mecab.  This takes long time...
+reading /usr/share/mecab/dic/ipadic/unk.def ... 40
+emitting double-array: 100% |###########################################|
+/usr/share/mecab/dic/ipadic/model.def is not found. skipped.
+reading /usr/share/mecab/dic/ipadic/Prefix.csv ... 221
+reading /usr/share/mecab/dic/ipadic/Noun.number.csv ... 42
+reading /usr/share/mecab/dic/ipadic/Verb.csv ... 130750
+reading /usr/share/mecab/dic/ipadic/Adverb.csv ... 3032
+reading /usr/share/mecab/dic/ipadic/Postp.csv ... 146
+reading /usr/share/mecab/dic/ipadic/Others.csv ... 2
+reading /usr/share/mecab/dic/ipadic/Noun.name.csv ... 34202
+reading /usr/share/mecab/dic/ipadic/Noun.nai.csv ... 42
+reading /usr/share/mecab/dic/ipadic/Auxil.csv ... 199
+reading /usr/share/mecab/dic/ipadic/Symbol.csv ... 208
+reading /usr/share/mecab/dic/ipadic/Noun.csv ... 60477
+reading /usr/share/mecab/dic/ipadic/Noun.adjv.csv ... 3328
+reading /usr/share/mecab/dic/ipadic/Suffix.csv ... 1393
+reading /usr/share/mecab/dic/ipadic/Postp-col.csv ... 91
+reading /usr/share/mecab/dic/ipadic/Adj.csv ... 27210
+reading /usr/share/mecab/dic/ipadic/Noun.demonst.csv ... 120
+reading /usr/share/mecab/dic/ipadic/Filler.csv ... 19
+reading /usr/share/mecab/dic/ipadic/Noun.proper.csv ... 27328
+reading /usr/share/mecab/dic/ipadic/Noun.org.csv ... 16668
+reading /usr/share/mecab/dic/ipadic/Noun.place.csv ... 72999
+reading /usr/share/mecab/dic/ipadic/Adnominal.csv ... 135
+reading /usr/share/mecab/dic/ipadic/Noun.verbal.csv ... 12146
+reading /usr/share/mecab/dic/ipadic/Noun.others.csv ... 151
+reading /usr/share/mecab/dic/ipadic/Noun.adverbal.csv ... 795
+reading /usr/share/mecab/dic/ipadic/Conjunction.csv ... 171
+reading /usr/share/mecab/dic/ipadic/Interjection.csv ... 252
+emitting double-array: 100% |###########################################|
+reading /usr/share/mecab/dic/ipadic/matrix.def ... 1316x1316
+emitting matrix      : 100% |###########################################|
+
+done!
+update-alternatives: using /var/lib/mecab/dic/ipadic-utf8 to provide /var/lib/mecab/dic/debian (mecab-dictionary) in auto mode
+Setting up libhtml-parser-perl:amd64 (3.81-1build3) ...
+Setting up libhttp-message-perl (6.45-1ubuntu1) ...
+Setting up mysql-server (8.0.44-0ubuntu0.24.04.2) ...
+Setting up libcgi-pm-perl (4.63-1) ...
+Setting up libhtml-template-perl (2.97-2) ...
+Setting up libcgi-fast-perl (1:2.17-1) ...
+Processing triggers for man-db (2.12.0-4build2) ...
+Processing triggers for libc-bin (2.39-0ubuntu8.6) ...
+Scanning processes...
+Scanning linux images...
+
+Running kernel seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+Synchronizing state of mysql.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install enable mysql
+🔧 Installing Git & Composer...
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+git is already the newest version (1:2.43.0-1ubuntu7.3).
+git set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 1 not upgraded.
+All settings correct for using Composer
+Downloading...
+
+Composer (version 2.9.2) successfully installed to: /usr/local/bin/composer
+Use it: php /usr/local/bin/composer
+
+📥 Cloning project...
+Cloning into 'PHP_Login'...
+remote: Enumerating objects: 86, done.
+remote: Counting objects: 100% (86/86), done.
+remote: Compressing objects: 100% (55/55), done.
+remote: Total 86 (delta 27), reused 74 (delta 21), pack-reused 0 (from 0)
+Receiving objects: 100% (86/86), 46.34 KiB | 2.21 MiB/s, done.
+Resolving deltas: 100% (27/27), done.
+🔐 Creating SSL certificate...
+req: Use -help for summary.
+chmod: cannot access '/etc/ssl/private/php-login.key': No such file or directory
+⚙️ Configuring Apache...
+Considering dependency mime for ssl:
+Module mime already enabled
+Considering dependency socache_shmcb for ssl:
+Enabling module socache_shmcb.
+Enabling module ssl.
+See /usr/share/doc/apache2/README.Debian.gz on how to configure SSL and create self-signed certificates.
+Enabling module headers.
+Enabling module rewrite.
+To activate the new configuration, you need to run:
+  systemctl restart apache2
+Enabling site php-login-ssl.
+To activate the new configuration, you need to run:
+  systemctl reload apache2
+Site 000-default disabled.
+To activate the new configuration, you need to run:
+  systemctl reload apache2
+🗄️ Setting up database...
+📝 Creating .env...
+Job for apache2.service failed because the control process exited with error code.
+See "systemctl status apache2.service" and "journalctl -xeu apache2.service" for details.
+
+========================================
+✅ Installation Complete!
+========================================
+
+🌐 Open in browser:
+   https://74.176.217.151/login.php
+
+📝 Database credentials:
+   User: php_login_user
+   Pass: SecurePass123!
+
+⚠️  Click 'Advanced' > 'Proceed' to bypass SSL warning
+========================================
+df@df:~$
