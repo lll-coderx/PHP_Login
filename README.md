@@ -2,7 +2,7 @@
 
 A secure, production-ready PHP login and password reset system implementing OWASP Top 10 security best practices.
 
-![PHP Version](https://img.shields.io/badge/PHP-8.1%2B-blue)
+![PHP Version](https://img.shields.io/badge/PHP-8.4%2B-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Security](https://img.shields.io/badge/security-OWASP%20Top%2010-red)
 
@@ -55,7 +55,7 @@ This system implements comprehensive security measures to protect against common
 
 ## 📋 Requirements
 
-- **PHP**: 8.1 or higher
+- **PHP**: 8.4 or higher
 - **MySQL**: 8.0+ or MariaDB 10.5+
 - **Apache**: 2.4+ (with mod_rewrite)
 - **PHP Extensions**: PDO, pdo_mysql, mbstring, openssl
