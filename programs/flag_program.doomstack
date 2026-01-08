@@ -1,0 +1,149 @@
+# DoomStack Program: Flag Revelation
+# This program uses various stack operations to output the flag
+# Flag: WTCTT2025{stack_vm_challenge_solved}
+
+# Direct character outputs using stack arithmetic
+
+# 'W' = 87
+PUSH 87
+WRITEC
+
+# 'T' = 84
+PUSH 84
+WRITEC
+
+# 'C' = 67
+PUSH 67
+WRITEC
+
+# 'T' = 84
+PUSH 84
+WRITEC
+
+# 'T' = 84
+PUSH 84
+WRITEC
+
+# '2' = 50
+PUSH 50
+WRITEC
+
+# '0' = 48
+PUSH 48
+WRITEC
+
+# '2' = 50
+PUSH 50
+WRITEC
+
+# '5' = 53
+PUSH 53
+WRITEC
+
+# '{' = 123
+PUSH 123
+WRITEC
+
+# 's' = 115
+PUSH 115
+WRITEC
+
+# 't' = 116
+PUSH 116
+WRITEC
+
+# 'a' = 97
+PUSH 97
+WRITEC
+
+# 'c' = 99
+PUSH 99
+WRITEC
+
+# 'k' = 107
+PUSH 107
+WRITEC
+
+# '_' = 95
+PUSH 95
+WRITEC
+
+# 'v' = 118
+PUSH 118
+WRITEC
+
+# 'm' = 109
+PUSH 109
+WRITEC
+
+# '_' = 95
+PUSH 95
+WRITEC
+
+# 'c' = 99
+PUSH 99
+WRITEC
+
+# 'h' = 104
+PUSH 104
+WRITEC
+
+# 'a' = 97
+PUSH 97
+WRITEC
+
+# 'l' = 108
+PUSH 108
+WRITEC
+
+# 'l' = 108
+PUSH 108
+WRITEC
+
+# 'e' = 101
+PUSH 101
+WRITEC
+
+# 'n' = 110
+PUSH 110
+WRITEC
+
+# 'g' = 103
+PUSH 103
+WRITEC
+
+# 'e' = 101
+PUSH 101
+WRITEC
+
+# '_' = 95
+PUSH 95
+WRITEC
+
+# 's' = 115
+PUSH 115
+WRITEC
+
+# 'o' = 111
+PUSH 111
+WRITEC
+
+# 'l' = 108
+PUSH 108
+WRITEC
+
+# 'v' = 118
+PUSH 118
+WRITEC
+
+# 'e' = 101
+PUSH 101
+WRITEC
+
+# 'd' = 100
+PUSH 100
+WRITEC
+
+# '}' = 125
+PUSH 125
+WRITEC

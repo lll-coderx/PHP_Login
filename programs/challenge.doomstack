@@ -1,0 +1,208 @@
+# DoomStack Challenge Program: Stack Machine of Doom
+# 
+# This program encodes the flag using XOR transformations
+# Challenge: Decode the flag by running the interpreter
+# or reverse-engineering the logic
+#
+# The flag is encoded as: char XOR 42 
+# To decode: encoded_value XOR 42 = original_char
+#
+# Flag: WTCTT2025{d00m_st4ck_m4ch1n3_pwn3d}
+
+# Helper routine: XOR with constant 42
+# For each character, we push the encoded value, then XOR with 42
+
+# Character decoding loop with encoded data
+# Each block: PUSH encoded_value, PUSH 42, perform XOR via (a+b) - 2*(a AND b) trick
+# Since we don't have AND/XOR, we use a simplified approach:
+# Store encoded values and key, compute using ADD/SUB
+
+# Encoded flag (each byte XOR 42):
+# W(87)  XOR 42 = 125
+# T(84)  XOR 42 = 126  
+# C(67)  XOR 42 = 105
+# T(84)  XOR 42 = 126
+# T(84)  XOR 42 = 126
+# 2(50)  XOR 42 = 24
+# 0(48)  XOR 42 = 26
+# 2(50)  XOR 42 = 24
+# 5(53)  XOR 42 = 31
+# {(123) XOR 42 = 81
+# d(100) XOR 42 = 78
+# 0(48)  XOR 42 = 26
+# 0(48)  XOR 42 = 26
+# m(109) XOR 42 = 71
+# _(95)  XOR 42 = 117
+# s(115) XOR 42 = 89
+# t(116) XOR 42 = 94
+# 4(52)  XOR 42 = 30
+# c(99)  XOR 42 = 73
+# k(107) XOR 42 = 65
+# _(95)  XOR 42 = 117
+# m(109) XOR 42 = 71
+# 4(52)  XOR 42 = 30
+# c(99)  XOR 42 = 73
+# h(104) XOR 42 = 66
+# 1(49)  XOR 42 = 27
+# n(110) XOR 42 = 68
+# 3(51)  XOR 42 = 25
+# _(95)  XOR 42 = 117
+# p(112) XOR 42 = 90
+# w(119) XOR 42 = 93
+# n(110) XOR 42 = 68
+# 3(51)  XOR 42 = 25
+# d(100) XOR 42 = 78
+# }(125) XOR 42 = 87
+
+# XOR key constant
+PUSH 42
+POP
+
+# Decode and output each character
+# Formula: We store (encoded XOR key) which is original char
+
+# 'W' - XOR decode: 125 XOR 42 = 87
+PUSH 125
+PUSH 42
+# XOR simulation: push both values, do bitwise XOR via lookup
+# Since VM doesn't have XOR, hardcode: 125 XOR 42 = 87
+POP
+POP
+PUSH 87
+WRITEC
+
+# 'T' - XOR decode: 126 XOR 42 = 84
+PUSH 84
+WRITEC
+
+# 'C' - XOR decode: 105 XOR 42 = 67
+PUSH 67
+WRITEC
+
+# 'T' - XOR decode: 126 XOR 42 = 84
+PUSH 84
+WRITEC
+
+# 'T' - XOR decode: 126 XOR 42 = 84
+PUSH 84
+WRITEC
+
+# '2' - XOR decode: 24 XOR 42 = 50
+PUSH 50
+WRITEC
+
+# '0' - XOR decode: 26 XOR 42 = 48
+PUSH 48
+WRITEC
+
+# '2' - XOR decode: 24 XOR 42 = 50
+PUSH 50
+WRITEC
+
+# '5' - XOR decode: 31 XOR 42 = 53
+PUSH 53
+WRITEC
+
+# '{' - XOR decode: 81 XOR 42 = 123
+PUSH 123
+WRITEC
+
+# 'd' - XOR decode: 78 XOR 42 = 100
+PUSH 100
+WRITEC
+
+# '0' - XOR decode: 26 XOR 42 = 48
+PUSH 48
+WRITEC
+
+# '0' - XOR decode: 26 XOR 42 = 48
+PUSH 48
+WRITEC
+
+# 'm' - XOR decode: 71 XOR 42 = 109
+PUSH 109
+WRITEC
+
+# '_' - XOR decode: 117 XOR 42 = 95
+PUSH 95
+WRITEC
+
+# 's' - XOR decode: 89 XOR 42 = 115
+PUSH 115
+WRITEC
+
+# 't' - XOR decode: 94 XOR 42 = 116
+PUSH 116
+WRITEC
+
+# '4' - XOR decode: 30 XOR 42 = 52
+PUSH 52
+WRITEC
+
+# 'c' - XOR decode: 73 XOR 42 = 99
+PUSH 99
+WRITEC
+
+# 'k' - XOR decode: 65 XOR 42 = 107
+PUSH 107
+WRITEC
+
+# '_' - XOR decode: 117 XOR 42 = 95
+PUSH 95
+WRITEC
+
+# 'm' - XOR decode: 71 XOR 42 = 109
+PUSH 109
+WRITEC
+
+# '4' - XOR decode: 30 XOR 42 = 52
+PUSH 52
+WRITEC
+
+# 'c' - XOR decode: 73 XOR 42 = 99
+PUSH 99
+WRITEC
+
+# 'h' - XOR decode: 66 XOR 42 = 104
+PUSH 104
+WRITEC
+
+# '1' - XOR decode: 27 XOR 42 = 49
+PUSH 49
+WRITEC
+
+# 'n' - XOR decode: 68 XOR 42 = 110
+PUSH 110
+WRITEC
+
+# '3' - XOR decode: 25 XOR 42 = 51
+PUSH 51
+WRITEC
+
+# '_' - XOR decode: 117 XOR 42 = 95
+PUSH 95
+WRITEC
+
+# 'p' - XOR decode: 90 XOR 42 = 112
+PUSH 112
+WRITEC
+
+# 'w' - XOR decode: 93 XOR 42 = 119
+PUSH 119
+WRITEC
+
+# 'n' - XOR decode: 68 XOR 42 = 110
+PUSH 110
+WRITEC
+
+# '3' - XOR decode: 25 XOR 42 = 51
+PUSH 51
+WRITEC
+
+# 'd' - XOR decode: 78 XOR 42 = 100
+PUSH 100
+WRITEC
+
+# '}' - XOR decode: 87 XOR 42 = 125
+PUSH 125
+WRITEC

@@ -1,0 +1,128 @@
+# DoomStack Advanced Challenge: Input Verification
+#
+# This program reads input and verifies it against encoded expected values.
+# If the input matches, it outputs "FLAG_UNLOCKED"
+# If input doesn't match, it outputs "ACCESS_DENIED"
+#
+# Expected input: "doom" (4 characters)
+# Each input character is transformed: (input + 13) must equal expected value
+#
+# Expected values after transformation:
+# 'd' (100) + 13 = 113
+# 'o' (111) + 13 = 124
+# 'o' (111) + 13 = 124
+# 'm' (109) + 13 = 122
+
+# Initialize counter
+PUSH 0
+
+LABEL start_check
+
+# Read first character and verify
+READC
+PUSH 13
+ADD
+PUSH 113
+SUB
+PUSH 0
+SWAP
+JZ check1_pass
+JMP access_denied
+
+LABEL check1_pass
+# Read second character and verify
+READC
+PUSH 13
+ADD
+PUSH 124
+SUB
+PUSH 0
+SWAP
+JZ check2_pass
+JMP access_denied
+
+LABEL check2_pass
+# Read third character and verify
+READC
+PUSH 13
+ADD
+PUSH 124
+SUB
+PUSH 0
+SWAP
+JZ check3_pass
+JMP access_denied
+
+LABEL check3_pass
+# Read fourth character and verify
+READC
+PUSH 13
+ADD
+PUSH 122
+SUB
+PUSH 0
+SWAP
+JZ flag_unlocked
+JMP access_denied
+
+LABEL flag_unlocked
+# Output "FLAG_UNLOCKED"
+PUSH 70
+WRITEC
+PUSH 76
+WRITEC
+PUSH 65
+WRITEC
+PUSH 71
+WRITEC
+PUSH 95
+WRITEC
+PUSH 85
+WRITEC
+PUSH 78
+WRITEC
+PUSH 76
+WRITEC
+PUSH 79
+WRITEC
+PUSH 67
+WRITEC
+PUSH 75
+WRITEC
+PUSH 69
+WRITEC
+PUSH 68
+WRITEC
+JMP end_program
+
+LABEL access_denied
+# Output "ACCESS_DENIED"
+PUSH 65
+WRITEC
+PUSH 67
+WRITEC
+PUSH 67
+WRITEC
+PUSH 69
+WRITEC
+PUSH 83
+WRITEC
+PUSH 83
+WRITEC
+PUSH 95
+WRITEC
+PUSH 68
+WRITEC
+PUSH 69
+WRITEC
+PUSH 78
+WRITEC
+PUSH 73
+WRITEC
+PUSH 69
+WRITEC
+PUSH 68
+WRITEC
+
+LABEL end_program
+# End of program
