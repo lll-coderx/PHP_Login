@@ -11,7 +11,8 @@
             "App\\Auth\\": "src/Auth/",
             "App\\Recovery\\": "src/Recovery/",
             "App\\Mail\\": "src/Mail/",
-            "App\\Security\\": "src/Security/"
+            "App\\Security\\": "src/Security/",
+            "App\\DoomStack\\": "src/DoomStack/"
         }
     },
     "config": {
