@@ -19,8 +19,8 @@ namespace App\DoomStack;
  * - MOD      : Pop two values (a=second, b=top), push (a % b)
  * - DUP      : Duplicate the top value on the stack
  * - SWAP     : Swap the top two values on the stack
- * - READC    : Read 1 byte from input stream, push as integer
- * - WRITEC   : Pop 1 value, write as ASCII character (0-255)
+ * - READC    : Read 1 byte from input stream, push as integer (or -1 on EOF)
+ * - WRITEC   : Pop 1 value, write as ASCII character (values outside 0-255 are silently ignored)
  * - JMP L    : Jump to label L
  * - JZ L     : Pop 1 value, if zero jump to label L
  * - LABEL L  : Define a jump target label L
@@ -290,6 +290,7 @@ class Interpreter
                     throw new \RuntimeException("Stack underflow on WRITEC at IP {$this->ip}");
                 }
                 $value = array_pop($this->stack);
+                // Values outside 0-255 range are silently ignored (no output produced)
                 if ($value >= 0 && $value <= 255) {
                     $this->output .= chr($value);
                 }

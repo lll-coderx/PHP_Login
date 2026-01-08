@@ -125,4 +125,4 @@ PUSH 68
 WRITEC
 
 LABEL end_program
-POP
+# End of program
